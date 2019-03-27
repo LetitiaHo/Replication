@@ -44,7 +44,7 @@ git checkout tags/v1.0.0
 ```
 You should now have a file in your directory called `neural-complexity`.
 ### 2.3. Get the [base LM weights](https://s3.amazonaws.com/colorless-green-rnns/best-models/English/hidden650_batch128_dropout0.2_lr20.0.pt)
-Click on the link to download the file. Go back to the original Jupyter notebook directory tab in your browser, upload the LM weights `.pt` file into the `neural-complexity` directory.
+Click on the link to download the weights. Go back to the original Jupyter notebook directory tab in your browser, upload the LM weights `.pt` file into the `neural-complexity` directory.
 ### 2.4. Get the [model vocabulary](https://s3.amazonaws.com/colorless-green-rnns/training-data/English/vocab.txt)
 Click on the link to download the `vocab.txt`. Go to your Jupyter notebook directory and upload the file into the `neural-complexity` directory. 
 ### 2.5. Get the Extended Penn Tokenizer
