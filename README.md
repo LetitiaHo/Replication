@@ -65,8 +65,9 @@ Go to your home directory and get the file by running:
 cd
 git clone https://github.com/languageMIT/naturalstories.git
 ```
-### 2.8. 
-Go to the `modelblocks-release` directory then run the following lines of code to split the Natural Stories Corpus into separate `.linetoks` files to be used for testing.
+### 2.8. Splitting up the Natural Stories Corpus
+Go to the `modelblocks-release` directory then run the following lines of code to split each story into individual `.linetoks` files to be used for testing. `%fairy.linetoks` contains all the fairytale stories and `%doc.linetoks` contains all the documentary documents.
+
 ```
 cd modelblocks-release
 mkdir config  
@@ -88,7 +89,6 @@ cat genmodel/naturalstories.linetoks | head -n 485 | tail -n 43 > genmodel/natur
 cat genmodel/naturalstories.{0,1,2,3,4,5,6}.linetoks > genmodel/naturalstories.fairy.linetoks  
 cat genmodel/naturalstories.{7,8,9}.linetoks > genmodel/naturalstories.doc.linetoks
 ```
-This section of code formats the `naturalstories.linetoks` corpus into separate `.linetok` files, each containing a single story. `%fairy.linetoks` contains all the fairytale documents and `%doc.linetoks` contains all the documentary documents.
 
 # 3. Testing the model
 ### 3.1. Preparing files
@@ -103,8 +103,8 @@ The final step in each line of code outputs the perplexity results into `full_co
 ```
 cat full_corpus.notadapted.results
 ```
-### 3.3. Analysis 2: Adapting the model to the stories in `genmodel/naturalstories.fairy.linetoks` and `genmodel/naturalstories.doc.linetoks`
-Repeating the above with different stories. Copy and paste each line of code into the command line and run.
+### 3.3. Analysis 2: Adapting the model to other story genres.
+Repeating the above with stories in `genmodel/naturalstories.fairy.linetoks` and `genmodel/naturalstories.doc.linetoks`. Copy and paste each line of code into the command line and run.
 ```
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.doc.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > full_corpus.adapted.results
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.doc.linetoks' --test --words > full_corpus.notadapted.results   
