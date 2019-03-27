@@ -1,5 +1,5 @@
 # Replication
-*Replicating the
+*Implementing the code by van Schijendel & Linzen (2018)*
 # 1. Launching Amazon EC2 Instance
 ### 1.
 Create an Amazon virtual server by creating an AWS account. You will be creating a server that will provide you with access to GPUs, which will be required to run the neural networks training and testing in seconds instead of hours or days.
@@ -28,3 +28,14 @@ You will asked whether you want to continue connecting, answer *yes*. Once you a
 ```
 jupyter notebook
 ```
+# 2. Preparing files
+While within your Jupyter notebook, select *New* on the upper right corner and scroll down to click on `Terminal`. All the following lines of code are executed in the commnand line unless stated otherwise.
+### 1. Get Pytorch v0.3.0
+``` 
+pip install http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp36-cp36m-linux_x86_64.whl
+```
+### 2. Get the adaptive LM 
+```
+git clone https://github.com/vansky/neural-complexity
+```
+
