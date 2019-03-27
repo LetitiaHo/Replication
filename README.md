@@ -106,54 +106,31 @@ cat full_corpus.notadapted.results
 ### 3.3. Analysis 2: Adapting the model to the stories in `genmodel/naturalstories.fairy.linetoks` and `genmodel/naturalstories.doc.linetoks`
 Repeating the above with different stories. Copy and paste each line of code into the command line and run.
 ```
-time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.fairy.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > full_corpus.adapted.results
-
-time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.fairy.linetoks' --test --words > full_corpus.notadapted.results   
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.doc.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > full_corpus.adapted.results
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.doc.linetoks' --test --words > full_corpus.notadapted.results   
 ```
 ### 3.4. Analysis 3:
 Repeat the above with each of genmodel/naturalstories.{0,1,2,3,4,5,6}.linetoks compared with each of genmodel/naturalstories.{7,8,9}.linetoks
 ```
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.0.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > naturalstories.0.adapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.0.linetoks' --test --words > naturalstories.0.noadapt.results
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.1.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > naturalstories.1.adapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.1.linetoks' --test --words > naturalstories.1.noadapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.2.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > naturalstories.2.adapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.2.linetoks' --test --words > naturalstories.2.noadapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.3.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > naturalstories.3.adapt.results   
-
-time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.3.linetoks' --test --words > naturalstories.3.noadapt.results  
-
+time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.3.linetoks' --test --words > naturalstories.3.noadapt.results 
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.4.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > naturalstories.4.adapt.results    
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.4.linetoks' --test --words > naturalstories.4.noadapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.5.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > naturalstories.5.adapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.5.linetoks' --test --words > naturalstories.5.noadapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.6.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > naturalstories.6.adapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.6.linetoks' --test --words > naturalstories.6.noadapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.7.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > naturalstories.7.adapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.7.linetoks' --test --words > naturalstories.7.noadapt.results   
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.8.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > naturalstories.8.adapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.8.linetoks' --test --words > naturalstories.8.noadapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.9.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > naturalstories.9.adapt.results  
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.9.linetoks' --test --words > naturalstories.9.noadapt.results  
 ```
 # 4. Data processing
