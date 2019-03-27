@@ -97,7 +97,6 @@ Put the `.linetoks` files in a subdirectory natstor within the `neural-complexit
 Use the following quickstart adaptation command to adapt to naturalstories.linetoks
 ```
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.linetoks' --test --words --adapt --adapted_model 'adapted_model.pt' > full_corpus.adapted.results
-
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.linetoks' --test --words > full_corpus.notadapted.results
 ```
 The final step in each line of code outputs the perplexity results into `full_corpus.adapted.results` and `full_corpus.notadapted.results`. Check the results with:
