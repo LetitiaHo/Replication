@@ -134,4 +134,18 @@ time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --voc
 time python main.py --model_file 'hidden650_batch128_dropout0.2_lr20.0.pt' --vocab_file 'vocab.txt' --cuda --single --data_dir './data/natstor/' --testfname 'naturalstories.9.linetoks' --test --words > naturalstories.9.noadapt.results  
 ```
 # 4. Data processing
-
+### 4.1 Getting R packages
+Get `optparse`, `optimx`, `lme4`, and `R-hacks`  to do this execute the following lines of code:
+```
+R
+install.packages('optparse')
+install.packages('optimx')
+install.packages('lme4')
+cd modelblocks-release/resources-rhacks/scripts
+git clone https://github.com/aufrank/R-hacks.git
+```
+### 4.2 Edit the dataframe
+Rename the surp column in naturalstories.0.noadapt.results to surpnoa
+```
+sed -i '1 s/surp/surpnoa/' naturalstories.0.noadapt.results
+```
