@@ -141,8 +141,12 @@ R
 install.packages('optparse')
 install.packages('optimx')
 install.packages('lme4')
-cd modelblocks-release/resources-rhacks/scripts
+q()
+cd modelblocks-release/resources-rhacks/
+mkdir scripts
 git clone https://github.com/aufrank/R-hacks.git
+mv R-hacks/* scripts
+rm -r R-hacks
 ```
 ### 4.2 Edit the dataframe
 Rename the surp column in naturalstories.0.noadapt.results to surpnoa
