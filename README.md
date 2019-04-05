@@ -1,5 +1,5 @@
 # Replication
-Implementing the code by van Schijndel & Linzen (2018). This set of instructions combines some of the steps from van Schijndel's own [GitHub](https://github.com/vansky/replications/blob/master/vanschijndel_linzen-2018-emnlp/vanschijndel_linzen-2018-emnlp-replication.md) with steps for how to run the models on an Amazon EC2 server and some tips for solving issues that might arise.
+Implementing the code by [**van Schijndel & Linzen (2018)**](https://vansky.github.io/assets/pdf/vanschijndel_linzen-2018-emnlp_adapt-joint.pdf). This set of instructions combines some of the steps from van Schijndel's own [GitHub](https://github.com/vansky/replications/blob/master/vanschijndel_linzen-2018-emnlp/vanschijndel_linzen-2018-emnlp-replication.md) with steps for how to run the models on an Amazon EC2 server and some tips for solving issues that might arise.
 
 # 1. Launching Amazon EC2 Instance
 ### 1.1. Create an AWS account
