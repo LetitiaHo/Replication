@@ -93,7 +93,11 @@ cat genmodel/naturalstories.{7,8,9}.linetoks > genmodel/naturalstories.doc.linet
 
 # 3. Testing the model
 ### 3.0 Preparing files
-Put the `.linetoks` files in a subdirectory natstor within the `neural-complexity/data` directory. 
+Put the `.linetoks` files in a subdirectory `natstor` within the `neural-complexity/data` directory. 
+```
+mkdir /home/ubuntu/neural-complexity/data/natstor
+mv /home/ubuntu/modelblocks-release/workspace/genmodel/*.linetoks /home/ubuntu/neural-complexity/data/natstor
+```
 ### 3.1 Analysis 1: Adapting the model to each story in the Natural Stories Corpus
 Use the following quickstart adaptation command to adapt to naturalstories.linetoks
 ```
